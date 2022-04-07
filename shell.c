@@ -17,11 +17,11 @@ int main(int argc, char *argv[], char *envp[])
 		printf("$ ");
 		if (getline(&lineptr, &n, stdin) == -1)
 			break;
-		tok = strtok(lineptr, " \t\n\r");
+		tok = strtok(lineptr, " \n");
 		for (i = 0; i < 16 && tok != NULL; i++)
 		{
 			command[i] = tok;
-			tok = strtok(NULL, " \t\n\r");7
+			tok = strtok(NULL, " \n");
 		}
 		command[i] = NULL;
 		child = fork();
