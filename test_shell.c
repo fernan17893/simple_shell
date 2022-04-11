@@ -37,5 +37,5 @@ int main(void)
 		signal(SIGINT, SIG_IGN);
 
 		wait(&wstatus);
-		//if (WIFEXITED(wstatus)) printf("<%d>", WEXITSTATUS(wstatus));
-	}}
+	}
+}
