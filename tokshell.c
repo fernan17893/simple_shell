@@ -23,6 +23,9 @@ int main(int argc, char *argv[], char *envp[])
 			command[i] = tok;
 			tok = strtok(NULL, " \n");
 		}
+		if 
+
+
 		command[i] = NULL;
 		child = fork();
 		if (child == 0)
@@ -38,5 +41,5 @@ int main(int argc, char *argv[], char *envp[])
 	}
 	putchar('\n');
 	free(lineptr);
-	exit(status);
+	`exit(status);
 }
