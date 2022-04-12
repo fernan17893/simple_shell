@@ -23,6 +23,8 @@ int main(int argc, char *argv[], char *envp[])
 			command[i] = tok;
 			tok = strtok(NULL, " \n");
 		}
+		if(fork() == 0) exit(execvp(argv[0], argv));
+
 		command[i] = NULL;
 		child = fork();
 		if (child == 0)
