@@ -20,6 +20,12 @@ int main(unused int argc, unused char *argv[], char *envp[])
 			write(1, "$ ", 2);
 		if (getline(&lineptr, &n, stdin) == -1)
 			break;
+		if (_verifier(lineptr) == 0)
+		{
+			free(lineptr);
+			lineptr = NULL;
+			continue;
+		}
 		if (_strcmp(lineptr, "exit\n") == 0)
 		{
 			free(lineptr);

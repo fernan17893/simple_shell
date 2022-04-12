@@ -22,6 +22,5 @@ char *_strcat(char *dest, char *src);
 char *_strcpy(char *dest, char *src);
 int _check_program(char *program);
 int check_program(char *program);
-
-
+int _verifier(char *string);
 #endif
