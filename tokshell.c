@@ -1,11 +1,18 @@
-#include <unistd.h>
-#include <stdio.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <string.h>
-#include <stdlib.h>
+#include "main.h"
+#define unused __attribute__((unused))
 
-int main(int argc, char *argv[], char *envp[])
+
+/**
+* main- Runs simple shell
+* @argc: unused
+* @argv: unused
+* @envp:l
+* Return: 0
+*
+*
+*/
+
+int main(unused int argc, unused char *argv[], char *envp[])
 {
 	pid_t child;
 	char *command[16], *tok, *lineptr = NULL;
@@ -23,8 +30,8 @@ int main(int argc, char *argv[], char *envp[])
 			command[i] = tok;
 			tok = strtok(NULL, " \n");
 		}
-		if(fork() == 0) exit(execvp(argv[0], argv));
-
+		if
+		(fork() == 0) exit(execvp(argv[0], argv));
 		command[i] = NULL;
 		child = fork();
 		if (child == 0)
