@@ -20,7 +20,7 @@ int main(unused int argc, unused char *argv[], char *envp[])
 			write(1, "$ ", 2);
 		if (getline(&lineptr, &n, stdin) == -1)
 			break;
-		if (_verifier(lineptr) == 0)
+		if (_verifier(lineptr, envp) == 0)
 		{
 			free(lineptr);
 			lineptr = NULL;
@@ -31,13 +31,6 @@ int main(unused int argc, unused char *argv[], char *envp[])
 			free(lineptr);
 			exit(0);
 		}
-		else if (_strcmp(lineptr, "env\n") == 0)
-		{
-			_printenv(envp);
-			free(lineptr);
-			lineptr = NULL;
-			continue;
-		}
 		else
 		{
 			path = _getpath(envp, "PATH");
@@ -47,14 +40,9 @@ int main(unused int argc, unused char *argv[], char *envp[])
 			path = NULL;
 			free(lineptr);
 			lineptr = NULL;
-			if (_exec(string, command, envp) == -1)
-			{
-				write(1, command[0], _strlen(command[0]));
-				write(1, ": command not found\n", 20);
-			}
+			_exec(string, command, envp);
 		}
 	}
 	free(lineptr);
 	return (0);
 }
-
