@@ -68,6 +68,7 @@ int _check_program(char *program)
 /**
  * _verifier - verifies if string is whitespace, new line or tab
  * @string: string to be verifed
+ * @envp: environment
  * Return: 1 if non match, 0 if always match
  */
 
