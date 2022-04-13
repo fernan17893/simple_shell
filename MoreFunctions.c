@@ -74,7 +74,7 @@ int _check_program(char *program)
 int _verifier(char *string, char **envp)
 {
 	int i;
-	
+
 	if (_strcmp(string, "env\n") == 0)
 	{
 		_printenv(envp);
