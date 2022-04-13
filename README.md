@@ -26,18 +26,18 @@ As seen in the prototype, argc, argv are unused variables, while envp is the inh
 
 
 
-#output 
+# output 
 Below is an example of our simple shell executing the "ls -l" command.
 
-#bugs
+# bugs
 Program.
 
-#about
+# about
 
 Simple_shell is a simple emulation of the functionality of a UNIX command interpreter. As poart of group project finalizing the first trimester of Holberton School.
 
 [![Screenshot-from-2022-04-12-23-40-36.png](https://i.postimg.cc/WzTtGBC9/Screenshot-from-2022-04-12-23-40-36.png)](https://postimg.cc/62b9wm9R)
 
-#authors
+# authors
 
 This project was made by Fernando Aponte and Ian Bonano.
