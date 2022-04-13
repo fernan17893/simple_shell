@@ -1,0 +1,99 @@
+.TH man 1 "April 13, 2022" "HSH"
+
+.SH NAME
+.B simple_shell
+- A simple UNIX command interpreter.
+
+.br
+.SH SYNOPSIS
+.B simple_shell format "[options] [command_string] | argument]"
+
+
+.SH DESCRIPTION
+.PP
+This program is a simple shell that has been made for a Holberton School project. It contains basic features and functions found in other shell programs.
+.SS Overview
+Our shell is an executable file that reads lines from our given prompt, it then interprets them, and generally executes other commands. It runs by compiling all .c files in the repository to create an executable
+
+
+.SH OPTIONS
+If there are no operands our simple_shell will read commands from the standard input. there are no operands and the shell's standard input and standard error are attached to a terminal, the shell will be considered interactive.
+
+.SH MODES
+.PP
+Our simple_shell can be processed in this both ways:
+
+.B 1. hsh
+
+.B 2. Interactive mode
+.SS
+
+.SH BUILT-IN COMMANDS
+.B env
+- prints environment to be used as a path file containing shell commands to execute in the current enviorment.
+
+.B exit
+- exits the shell
+.SH EXAMPLES
+.B 1. Non interactice mode example:
+.PP
+$ echo "/bin/ls" | ./hsh
+
+hsh main.c shell.c test_ls_2
+$
+
+$ cat test_ls_2
+
+/bin/ls
+
+/bin/ls
+
+$
+
+$ cat test_ls_2 | ./hsh
+
+hsh main.c shell.c test_ls_2
+
+hsh main.c shell.c test_ls_2
+
+$
+
+.B 2. Interactice mode example:
+$ ./hsh
+
+($) /bin/ls
+
+hsh main.c shell.c
+
+($)
+
+($) exit
+
+$
+
+.SH Exit status
+.PP
+All commands have an exit status that affects the behavior of other shell commands. A succesfull use of the exit command will be displayed in the terminal as success, and non-zero for failure, or an error if otherwise.
+
+Other errors caused in our simple_shell after detection will cause the shell to exit with an error message.
+
+.SH SEE ALSO
+acces(2), chdir(2), close (2), closedir(2), execve(2), exit(3), _exit(2), fflush(3), fork(2), free(3), getcwd(3), getline(3) 
+isatty(3), kill(2), malloc(3), open(2), opendir(3), perror(3), read(2), readdir(3), signal(2), stat(2), lstat(2), fstat(2) 
+strtok(3), wait(2), waitpid(2), wait3(2), wait4(2), write(2).
+
+.SH BUGS
+No known bugs at the moment. Please notify any of the authors if you come across a bug.
+
+.SH COPYRIGHT
+See AUTHORS
+
+.SH AUTHORS
+.br
+Ian M. Bonano
+.B ian.bonano@holbertonschool.com
+
+.br
+Fernando Aponte
+.B fernando.aponte@holbertonschool.com
+
