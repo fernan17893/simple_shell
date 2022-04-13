@@ -6,7 +6,7 @@ Creation of a simple UNIX command interpreter, written as part of a low-level pr
 Simple_Shell is a Unix command interpreter interface, albeit much simpler than other shell interpreters. Shell is a program that interprets and executes user commands.
 
 
-#Invocation
+# Invocation
 
 To invoke our simple shell we compile all .c files and run the executable
 
