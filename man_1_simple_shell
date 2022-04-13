@@ -6,7 +6,7 @@
 
 .br
 .SH SYNOPSIS
-.B simple_shell format "[options] [command_string] | argument]"
+.B ./hsh format "[options] [command_string] | argument]"
 
 
 .SH DESCRIPTION
