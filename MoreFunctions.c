@@ -28,6 +28,7 @@ int _printenv(char *envp[])
 int _free_double(char **token)
 {
 	int i = 0;
+
 	if (token != NULL)
 	{
 		while (token[i] != NULL)
